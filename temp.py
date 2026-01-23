@@ -1,21 +1,14 @@
-class Book:
-    def __init__(self, title, author, year):
-        # Получаем аргументы и сохраняем их как атрибуты
-        self.title = title
-        self.author = author
-        self.year = year
-        self.is_available = True # Атрибут по умолчанию
+class Device:
+    def __init__(self):
+        self._voltage = 0
 
-    def show_info(self):
-        status = "в наличии" if self.is_available else "выдана"
-        print(f'"{self.title}", {self.author} ({self.year} г.) - Статус: {status}')
+    def get_voltage(self):
+        return self._voltage
 
-# Создаем первый объект-книгу
-book_1 = Book("Хоббит, или Туда и обратно", "Дж. Р. Р. Толкин", 1937)
+    def set_voltage(self, new_voltage):
+        self._voltage = new_voltage
 
-# Создаем второй, совершенно другой объект
-book_2 = Book("1984", "Джордж Оруэлл", 1949)
 
-book_1.show_info()
-#book_2.is_available = False
-book_2.show_info()
+dev_1 = Device(3)
+
+print(dev_1.get_voltage())
