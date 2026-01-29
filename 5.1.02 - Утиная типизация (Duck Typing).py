@@ -52,3 +52,4 @@ class Bird:
 def make_it_move(creature):
     # Вызываем метод move() у переданного объекта, не проверяя его тип
     return creature.move()
+
